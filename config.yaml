@@ -1,13 +1,4 @@
-# ============================================================
-# config.yaml
-# Sarcasm-Aware Sentiment Analysis Project
-# All paths, hyperparameters, and seeds live here.
-# ============================================================
-
-# Reproducibility
 seed: 42
-
-# Paths - data lives outside the repo
 paths:
   data_root: /home/ubuntu/raw
   sarc_dir: /home/ubuntu/raw/sarc
@@ -16,18 +7,13 @@ paths:
   results: /home/ubuntu/Final-Project-Group4/outputs/results
   plots: /home/ubuntu/Final-Project-Group4/outputs/plots
   logs: /home/ubuntu/Final-Project-Group4/outputs/logs
-
-# Data loading options
 data:
-  # Subsample for faster iteration. Set to null to use full dataset.
   sarc_train_sample: null
   sarc_test_sample: null
   twitter_train_sample: null
   twitter_test_sample: null
   val_split: 0.1
-  debug_sample: 1000  # small sample for smoke-testing scripts
-
-# Preprocessing options
+  debug_sample: 1000
 preprocessing:
   lowercase: true
   remove_urls: true
@@ -35,17 +21,19 @@ preprocessing:
   remove_special_chars: false
   min_text_length: 3
   max_text_length: 300
-
-# Classical model options
+  remove_label_hashtags: true
+  convert_emojis: true
+  tokenize: true
+  remove_stopwords: false
 classical:
   tfidf_max_features: 10000
-  tfidf_ngram_range: [1, 2]
+  tfidf_ngram_range:
+  - 1
+  - 2
   models:
-    - logistic_regression
-    - linear_svm
-    - naive_bayes
-
-# LSTM options
+  - logistic_regression
+  - linear_svm
+  - naive_bayes
 lstm:
   embedding_dim: 128
   hidden_dim: 128
@@ -57,24 +45,18 @@ lstm:
   batch_size: 64
   learning_rate: 0.001
   epochs: 5
-
-# DistilBERT options
 distilbert:
   model_name: distilbert-base-uncased
   max_seq_length: 128
   batch_size: 32
-  learning_rate: 0.00002
+  learning_rate: 2.0e-05
   epochs: 3
   warmup_ratio: 0.1
   weight_decay: 0.01
-
-# Contrast detection options (novel feature)
 contrast:
   model_name: sentence-transformers/all-MiniLM-L6-v2
-  clause_split_pattern: "[,.;!?]"
+  clause_split_pattern: '[,.;!?]'
   min_clauses: 2
-
-# Interpretability options
 interpretability:
   lime_num_features: 10
   lime_num_samples: 500

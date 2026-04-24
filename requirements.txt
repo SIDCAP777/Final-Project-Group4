@@ -39,3 +39,4 @@ seaborn==0.13.2
 
 # Progress bars and utilities
 tqdm==4.66.5
+emoji==2.12.1
