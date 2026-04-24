@@ -1,0 +1,81 @@
+# ============================================================
+# .gitignore for Final-Project-Group4
+# Sarcasm-Aware Sentiment Analysis Project
+# ============================================================
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# R history files (accidentally created sometimes)
+.Rhistory
+.RData
+.Ruserdata
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Python distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Jupyter notebook checkpoints (in case any sneak in)
+.ipynb_checkpoints/
+
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files — never commit raw or processed data
+data/
+*.csv
+*.tsv
+*.json
+*.jsonl
+*.parquet
+*.pkl
+*.pickle
+
+# Trained models — too big for git
+saved_models/
+*.pt
+*.pth
+*.bin
+*.h5
+*.ckpt
+*.safetensors
+
+# Logs
+logs/
+outputs/logs/
+*.log
+
+# Environment variables / secrets
+.env
+*.pem
+*.key
+
+# HuggingFace / torch cache
+.cache/
+~/.cache/
+
+# OS-specific
+Thumbs.db
+desktop.ini

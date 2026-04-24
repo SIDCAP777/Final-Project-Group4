@@ -1,0 +1,41 @@
+# ============================================================
+# requirements.txt
+# Sarcasm-Aware Sentiment Analysis Project
+# Python 3.12, CUDA 12.6
+# ============================================================
+
+# Core data handling
+numpy==1.26.4
+pandas==2.2.2
+pyyaml==6.0.2
+
+# Classical ML
+scikit-learn==1.5.1
+scipy==1.13.1
+
+# Deep learning (PyTorch with CUDA 12.1 build — works with 12.6 driver)
+torch==2.4.0
+torchvision==0.19.0
+
+# Transformers / NLP
+transformers==4.44.2
+datasets==3.0.0
+tokenizers==0.19.1
+sentencepiece==0.2.0
+
+# Classical NLP utilities
+nltk==3.9.1
+
+# Sentence embeddings (for contrast detection)
+sentence-transformers==3.1.1
+
+# Interpretability
+lime==0.2.0.1
+shap==0.46.0
+
+# Plotting
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# Progress bars and utilities
+tqdm==4.66.5
