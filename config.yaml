@@ -7,6 +7,7 @@ paths:
   results: /home/ubuntu/Final-Project-Group4/outputs/results
   plots: /home/ubuntu/Final-Project-Group4/outputs/plots
   logs: /home/ubuntu/Final-Project-Group4/outputs/logs
+  glove: /home/ubuntu/embeddings/glove.6B.100d.txt
 data:
   sarc_train_sample: null
   sarc_test_sample: null
@@ -35,7 +36,7 @@ classical:
   - linear_svm
   - naive_bayes
 lstm:
-  embedding_dim: 128
+  embedding_dim: 100
   hidden_dim: 128
   num_layers: 2
   dropout: 0.3
@@ -44,7 +45,8 @@ lstm:
   max_seq_length: 100
   batch_size: 64
   learning_rate: 0.001
-  epochs: 5
+  epochs: 8
+  freeze_embeddings: false
 distilbert:
   model_name: distilbert-base-uncased
   max_seq_length: 128

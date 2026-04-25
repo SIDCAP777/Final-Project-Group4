@@ -1,0 +1,13 @@
+Model: LSTM
+Dataset: twitter
+Best val F1: 0.9905
+
+--- TEST ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.99      1.00      0.99      2044
+     Sarcasm       1.00      0.99      0.99      2276
+
+    accuracy                           0.99      4320
+   macro avg       0.99      0.99      0.99      4320
+weighted avg       0.99      0.99      0.99      4320

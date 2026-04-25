@@ -1,0 +1,13 @@
+Model: LSTM
+Dataset: sarc
+Best val F1: 0.7497
+
+--- TEST ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.72      0.81      0.76     50084
+     Sarcasm       0.79      0.69      0.74     50451
+
+    accuracy                           0.75    100535
+   macro avg       0.76      0.75      0.75    100535
+weighted avg       0.76      0.75      0.75    100535
