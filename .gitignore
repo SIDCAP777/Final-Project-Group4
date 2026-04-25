@@ -44,7 +44,7 @@ dist/
 *~
 
 # Data files — never commit raw or processed data
-data/
+/data/
 *.csv
 *.tsv
 *.json
@@ -79,3 +79,7 @@ outputs/logs/
 # OS-specific
 Thumbs.db
 desktop.ini
+
+# Exception: allow small result JSONs (metrics) to be committed for visibility
+!outputs/results/*.json
+!outputs/plots/*.png

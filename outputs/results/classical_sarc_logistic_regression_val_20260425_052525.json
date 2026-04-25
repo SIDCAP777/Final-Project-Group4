@@ -1,0 +1,29 @@
+{
+  "accuracy": 0.7230317799771224,
+  "precision_class_0": 0.70939736346516,
+  "recall_class_0": 0.752131461773456,
+  "f1_class_0": 0.730139654788095,
+  "precision_class_1": 0.7382945082744808,
+  "recall_class_1": 0.694144929834298,
+  "f1_class_1": 0.7155393463892039,
+  "precision_macro": 0.7238459358698204,
+  "recall_macro": 0.723138195803877,
+  "f1_macro": 0.7228395005886494,
+  "precision_weighted": 0.723898967383396,
+  "recall_weighted": 0.7230317799771224,
+  "f1_weighted": 0.72281270636873,
+  "confusion_matrix": [
+    [
+      37669,
+      12414
+    ],
+    [
+      15431,
+      35021
+    ]
+  ],
+  "model": "logistic_regression",
+  "dataset": "sarc",
+  "split": "val",
+  "fit_time_seconds": 79.32219314575195
+}

@@ -1,0 +1,23 @@
+Model: naive_bayes
+Dataset: sarc
+Fit time: 0.4s
+
+--- VAL ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.67      0.75      0.70     50083
+     Sarcasm       0.72      0.63      0.67     50452
+
+    accuracy                           0.69    100535
+   macro avg       0.69      0.69      0.69    100535
+weighted avg       0.69      0.69      0.69    100535
+
+--- TEST ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.67      0.75      0.70     50084
+     Sarcasm       0.72      0.63      0.67     50451
+
+    accuracy                           0.69    100535
+   macro avg       0.69      0.69      0.69    100535
+weighted avg       0.69      0.69      0.69    100535

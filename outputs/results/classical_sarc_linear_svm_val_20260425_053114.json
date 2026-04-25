@@ -1,0 +1,29 @@
+{
+  "accuracy": 0.7225543343114338,
+  "precision_class_0": 0.710627230617359,
+  "recall_class_0": 0.7474192839885789,
+  "f1_class_0": 0.7285590556544925,
+  "precision_class_1": 0.7356818989113856,
+  "recall_class_1": 0.69787124395465,
+  "f1_class_1": 0.7162779343105045,
+  "precision_macro": 0.7231545647643722,
+  "recall_macro": 0.7226452639716144,
+  "f1_macro": 0.7224184949824985,
+  "precision_weighted": 0.7232005446350664,
+  "recall_weighted": 0.7225543343114338,
+  "f1_weighted": 0.7223959568924008,
+  "confusion_matrix": [
+    [
+      37433,
+      12650
+    ],
+    [
+      15243,
+      35209
+    ]
+  ],
+  "model": "linear_svm",
+  "dataset": "sarc",
+  "split": "val",
+  "fit_time_seconds": 348.8470633029938
+}

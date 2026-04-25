@@ -1,0 +1,23 @@
+Model: naive_bayes
+Dataset: twitter
+Fit time: 0.0s
+
+--- VAL ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.92      0.90      0.91      2044
+     Sarcasm       0.91      0.93      0.92      2276
+
+    accuracy                           0.91      4320
+   macro avg       0.91      0.91      0.91      4320
+weighted avg       0.91      0.91      0.91      4320
+
+--- TEST ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.93      0.91      0.92      2044
+     Sarcasm       0.92      0.94      0.93      2276
+
+    accuracy                           0.93      4320
+   macro avg       0.93      0.92      0.92      4320
+weighted avg       0.93      0.93      0.92      4320

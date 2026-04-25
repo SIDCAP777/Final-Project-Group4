@@ -1,0 +1,29 @@
+{
+  "accuracy": 0.925,
+  "precision_class_0": 0.9304304304304304,
+  "recall_class_0": 0.9094911937377691,
+  "f1_class_0": 0.9198416625432954,
+  "precision_class_1": 0.9203273040482343,
+  "recall_class_1": 0.9389279437609842,
+  "f1_class_1": 0.9295345802522836,
+  "precision_macro": 0.9253788672393324,
+  "recall_macro": 0.9242095687493767,
+  "f1_macro": 0.9246881213977896,
+  "precision_weighted": 0.925107579586477,
+  "recall_weighted": 0.925,
+  "f1_weighted": 0.9249483941881235,
+  "confusion_matrix": [
+    [
+      1859,
+      185
+    ],
+    [
+      139,
+      2137
+    ]
+  ],
+  "model": "naive_bayes",
+  "dataset": "twitter",
+  "split": "test",
+  "fit_time_seconds": 0.022101402282714844
+}
