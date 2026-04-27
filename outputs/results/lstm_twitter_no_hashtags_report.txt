@@ -1,0 +1,13 @@
+Model: LSTM
+Dataset: twitter_no_hashtags
+Best val F1: 0.8233
+
+--- TEST ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.83      0.81      0.82      2044
+     Sarcasm       0.83      0.85      0.84      2276
+
+    accuracy                           0.83      4320
+   macro avg       0.83      0.83      0.83      4320
+weighted avg       0.83      0.83      0.83      4320

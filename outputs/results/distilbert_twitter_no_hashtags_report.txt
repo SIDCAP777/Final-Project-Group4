@@ -1,0 +1,13 @@
+Model: DistilBERT
+Dataset: twitter_no_hashtags
+Best val F1: 0.8605
+
+--- TEST ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.87      0.83      0.85      2044
+     Sarcasm       0.85      0.89      0.87      2276
+
+    accuracy                           0.86      4320
+   macro avg       0.86      0.86      0.86      4320
+weighted avg       0.86      0.86      0.86      4320

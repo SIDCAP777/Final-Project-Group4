@@ -1,0 +1,29 @@
+{
+  "accuracy": 0.8625,
+  "precision_class_0": 0.8744834710743802,
+  "recall_class_0": 0.8282778864970646,
+  "f1_class_0": 0.8507537688442212,
+  "precision_class_1": 0.852768456375839,
+  "recall_class_1": 0.8932337434094904,
+  "f1_class_1": 0.8725321888412018,
+  "precision_macro": 0.8636259637251096,
+  "recall_macro": 0.8607558149532775,
+  "f1_macro": 0.8616429788427115,
+  "precision_weighted": 0.8630428753674636,
+  "recall_weighted": 0.8625,
+  "f1_weighted": 0.8622277697500378,
+  "confusion_matrix": [
+    [
+      1693,
+      351
+    ],
+    [
+      243,
+      2033
+    ]
+  ],
+  "model": "distilbert",
+  "dataset": "twitter_no_hashtags",
+  "split": "test",
+  "best_val_f1_macro": 0.8604831718519226
+}
