@@ -1,0 +1,29 @@
+{
+  "accuracy": 0.6866563883224748,
+  "precision_class_0": 0.6631316501035923,
+  "recall_class_0": 0.754093123552432,
+  "f1_class_0": 0.7056933051813374,
+  "precision_class_1": 0.7173997843096762,
+  "recall_class_1": 0.6197102138708847,
+  "f1_class_1": 0.6649863876127275,
+  "precision_macro": 0.6902657172066342,
+  "recall_macro": 0.6869016687116583,
+  "f1_macro": 0.6853398463970325,
+  "precision_weighted": 0.6903647693041806,
+  "recall_weighted": 0.6866563883224748,
+  "f1_weighted": 0.6852655467066376,
+  "confusion_matrix": [
+    [
+      37768,
+      12316
+    ],
+    [
+      19186,
+      31265
+    ]
+  ],
+  "model": "naive_bayes_with_contrast",
+  "dataset": "sarc",
+  "split": "test",
+  "fit_time_seconds": 0.38693952560424805
+}
