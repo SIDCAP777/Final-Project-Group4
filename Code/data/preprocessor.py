@@ -29,6 +29,9 @@ LABEL_HASHTAGS = re.compile(
     flags=re.IGNORECASE,
 )
 
+# Match any hashtag (used for aggressive Twitter cleaning to test for leakage)
+ALL_HASHTAGS = re.compile(r"#\w+", flags=re.IGNORECASE)
+
 # Precompile regexes for speed (called 1M+ times)
 URL_RE = re.compile(r"http\S+|www\.\S+")
 MENTION_RE = re.compile(r"@\w+")
@@ -45,6 +48,7 @@ def clean_text(text: str,
                remove_mentions: bool = True,
                remove_special_chars: bool = False,
                remove_label_hashtags: bool = True,
+               remove_all_hashtags: bool = False,
                convert_emojis: bool = True) -> str:
     # Guard against NaN or non-string inputs
     if not isinstance(text, str):
@@ -62,6 +66,10 @@ def clean_text(text: str,
     # Keeps other hashtags (e.g., #politics) intact — those ARE useful features
     if remove_label_hashtags:
         text = LABEL_HASHTAGS.sub(" ", text)
+
+    # Aggressive: strip ALL hashtags (used to test the hashtag-leakage hypothesis on Twitter)
+    if remove_all_hashtags:
+        text = ALL_HASHTAGS.sub(" ", text)
 
     # Convert emojis to their text descriptions so classical models can use them
     # e.g., "😏" -> ":smirking_face:"
@@ -121,6 +129,7 @@ def clean_dataframe(df: pd.DataFrame, config: dict, add_tokens: bool = False) ->
             remove_mentions=prep_cfg["remove_mentions"],
             remove_special_chars=prep_cfg["remove_special_chars"],
             remove_label_hashtags=prep_cfg.get("remove_label_hashtags", True),
+            remove_all_hashtags=prep_cfg.get("remove_all_hashtags", False),
             convert_emojis=prep_cfg.get("convert_emojis", True),
         )
     )
