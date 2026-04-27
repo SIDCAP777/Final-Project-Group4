@@ -25,5 +25,5 @@
   "model": "logistic_regression",
   "dataset": "twitter_no_hashtags",
   "split": "test",
-  "fit_time_seconds": 1.0591626167297363
+  "fit_time_seconds": 1.072068452835083
 }

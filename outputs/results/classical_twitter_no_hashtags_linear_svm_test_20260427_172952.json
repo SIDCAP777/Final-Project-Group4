@@ -25,5 +25,5 @@
   "model": "linear_svm",
   "dataset": "twitter_no_hashtags",
   "split": "test",
-  "fit_time_seconds": 6.013988018035889
+  "fit_time_seconds": 6.034486532211304
 }

@@ -25,5 +25,5 @@
   "model": "naive_bayes",
   "dataset": "twitter_no_hashtags",
   "split": "test",
-  "fit_time_seconds": 0.023659229278564453
+  "fit_time_seconds": 0.023865938186645508
 }

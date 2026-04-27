@@ -1,12 +1,12 @@
 # ============================================================
-# twitter_leakage_test.py
-# Tests whether Twitter's high accuracy is from hashtag leakage.
+# twitter_leakage_test_classical.py
+# Tests whether Twitter's high accuracy is from hashtag leakage on classical models.
 #
 # Strips ALL hashtags from tweets, retrains classical models,
 # and compares to the original Twitter results.
 #
 # Run with:
-#   python Code/training/twitter_leakage_test.py
+#   python Code/training/twitter_leakage_test_classical.py
 # ============================================================
 
 import os
@@ -25,7 +25,7 @@ from utils.logger import get_logger
 from data.loader import load_twitter
 from data.preprocessor import clean_dataframe, split_data
 
-from features.classical_features import fit_features, transform_features
+from features.classical_features import fit_features, transform_features, save_vectorizers
 
 from models.classical import get_model
 
@@ -63,6 +63,13 @@ def main():
     X_val = transform_features(val["text"].tolist(), word_vec, char_vec)
     X_test = transform_features(test["text"].tolist(), word_vec, char_vec)
 
+    # Save the no-hashtags vectorizers so LIME / SHAP can reload them later
+    save_vectorizers(
+        word_vec, char_vec,
+        save_dir=config["paths"]["saved_models"],
+        tag="classical_twitter_no_hashtags",
+    )
+
     y_train = train["label"].values
     y_val = val["label"].values
     y_test = test["label"].values
@@ -77,6 +84,16 @@ def main():
         model.fit(X_train, y_train)
         fit_time = time.time() - start
         logger.info(f"[twitter_clean/{model_name}] Trained in {fit_time:.1f}s")
+
+        # Save the trained classifier so LIME / SHAP can reload it later
+        import pickle
+        model_path = os.path.join(
+            config["paths"]["saved_models"],
+            f"classical_twitter_no_hashtags_{model_name}.pkl",
+        )
+        with open(model_path, "wb") as f:
+            pickle.dump(model, f)
+        logger.info(f"[twitter_clean/{model_name}] Saved model to {model_path}")
 
         # Evaluate on test set
         y_pred = model.predict(X_test)
