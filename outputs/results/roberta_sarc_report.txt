@@ -1,0 +1,15 @@
+Model: RoBERTa-base
+Dataset: sarc
+Use parent context: True
+Best val F1: 0.7984 (epoch 3)
+Epochs run: 4/4
+
+--- TEST ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.80      0.79      0.80     50084
+     Sarcasm       0.80      0.80      0.80     50451
+
+    accuracy                           0.80    100535
+   macro avg       0.80      0.80      0.80    100535
+weighted avg       0.80      0.80      0.80    100535

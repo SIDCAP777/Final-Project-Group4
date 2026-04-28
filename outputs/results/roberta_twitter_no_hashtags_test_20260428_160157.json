@@ -1,0 +1,32 @@
+{
+  "accuracy": 0.8722222222222222,
+  "precision_class_0": 0.8790650406504065,
+  "recall_class_0": 0.8463796477495108,
+  "f1_class_0": 0.8624127617148555,
+  "precision_class_1": 0.8664965986394558,
+  "recall_class_1": 0.8954305799648506,
+  "f1_class_1": 0.8807260155574762,
+  "precision_macro": 0.8727808196449311,
+  "recall_macro": 0.8709051138571807,
+  "f1_macro": 0.8715693886361658,
+  "precision_weighted": 0.8724433337020444,
+  "recall_weighted": 0.8722222222222222,
+  "f1_weighted": 0.8720611334152732,
+  "confusion_matrix": [
+    [
+      1730,
+      314
+    ],
+    [
+      238,
+      2038
+    ]
+  ],
+  "model": "roberta",
+  "dataset": "twitter_no_hashtags",
+  "split": "test",
+  "best_val_f1_macro": 0.874503608597943,
+  "best_epoch": 2,
+  "epochs_run": 3,
+  "use_parent_context": false
+}

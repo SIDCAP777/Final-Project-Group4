@@ -1,0 +1,15 @@
+Model: RoBERTa-base
+Dataset: twitter_no_hashtags
+Use parent context: False
+Best val F1: 0.8745 (epoch 2)
+Epochs run: 3/4
+
+--- TEST ---
+              precision    recall  f1-score   support
+
+ Not Sarcasm       0.88      0.85      0.86      2044
+     Sarcasm       0.87      0.90      0.88      2276
+
+    accuracy                           0.87      4320
+   macro avg       0.87      0.87      0.87      4320
+weighted avg       0.87      0.87      0.87      4320
