@@ -1,0 +1,890 @@
+{
+  "model": "roberta",
+  "dataset": "twitter_no_hashtags",
+  "num_explanations": 20,
+  "shap_config": {
+    "num_samples": 500
+  },
+  "top_words_pushing_toward_sarcasm": [
+    [
+      "love",
+      0.5901077843736857
+    ],
+    [
+      "way",
+      0.5689116441644728
+    ],
+    [
+      "decent",
+      0.4929252602159977
+    ],
+    [
+      "hum",
+      0.4584372229874134
+    ],
+    [
+      "you",
+      0.26752712088637054
+    ],
+    [
+      "no",
+      0.24213027858058922
+    ],
+    [
+      "things.\"",
+      0.23543867748230696
+    ],
+    [
+      "just",
+      0.22362409438937902
+    ],
+    [
+      "disappointed",
+      0.2189102644333616
+    ],
+    [
+      "boring",
+      0.2119663085322827
+    ],
+    [
+      "like",
+      0.19992457027547061
+    ],
+    [
+      "not",
+      0.19709151284769177
+    ],
+    [
+      "please",
+      0.19146266137249768
+    ],
+    [
+      "true",
+      0.18711441848427057
+    ],
+    [
+      "quite",
+      0.17332873365376145
+    ],
+    [
+      "then",
+      0.1713527937536128
+    ],
+    [
+      "who",
+      0.1684604719048366
+    ],
+    [
+      "another",
+      0.16526196035556495
+    ],
+    [
+      "christian",
+      0.1575889913365245
+    ],
+    [
+      "what",
+      0.1549841423984617
+    ]
+  ],
+  "top_words_pushing_toward_not_sarcasm": [
+    [
+      "the",
+      0.5402233360218816
+    ],
+    [
+      "are",
+      0.42386220896150917
+    ],
+    [
+      "walk",
+      0.26171219744719565
+    ],
+    [
+      "for",
+      0.22445416117989225
+    ],
+    [
+      "to",
+      0.20436620331020094
+    ],
+    [
+      "sparkling_heart",
+      0.18461516592651606
+    ],
+    [
+      "posts...",
+      0.17143924511037767
+    ],
+    [
+      "away.",
+      0.16329422284616157
+    ],
+    [
+      "of",
+      0.15213663649046794
+    ],
+    [
+      "amp;",
+      0.14221771486336365
+    ],
+    [
+      "accessories",
+      0.12407618516590446
+    ],
+    [
+      "are '",
+      0.12301227383431979
+    ],
+    [
+      "over-",
+      0.12113896338269114
+    ],
+    [
+      "branding",
+      0.11511407466605306
+    ],
+    [
+      "by",
+      0.11163157958071679
+    ],
+    [
+      "made",
+      0.10574584826827049
+    ],
+    [
+      "at",
+      0.10547173788654618
+    ],
+    [
+      "taking",
+      0.09254097798839211
+    ],
+    [
+      "via",
+      0.08399684261530638
+    ],
+    [
+      "out",
+      0.07998255110578611
+    ]
+  ],
+  "examples": [
+    {
+      "category": "correct_sarcasm",
+      "rank": 1,
+      "text": "i love how i buy clothes and accessories for and then don't wear them.",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.007049398496747017,
+      "prob_sarcasm": 0.9929506778717041,
+      "tokens": [
+        "i ",
+        "love ",
+        "how ",
+        "i ",
+        "buy ",
+        "clothes ",
+        "and ",
+        "accessories ",
+        "for ",
+        "and ",
+        "then ",
+        "don'",
+        "t ",
+        "wear ",
+        "them"
+      ],
+      "shap_values": [
+        0.14147810940630734,
+        0.3722086923662573,
+        0.06377905851695687,
+        0.05815730697941035,
+        0.006061751628294587,
+        0.04122610785998404,
+        -0.01877284375950694,
+        -0.12407618516590446,
+        -0.08135829854290932,
+        0.0023120605619624257,
+        0.07384789880597964,
+        -0.03506004618247971,
+        0.06243300883215852,
+        0.041390318219782785,
+        0.12052908254554495
+      ]
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 2,
+      "text": "i love being woken up to the sounds of fucking.... better than birds chirping",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.010351241566240788,
+      "prob_sarcasm": 0.989648699760437,
+      "tokens": [
+        "i ",
+        "love ",
+        "being ",
+        "woken ",
+        "up ",
+        "to ",
+        "the ",
+        "sounds ",
+        "of ",
+        "fucking.... ",
+        "better ",
+        "than ",
+        "birds ",
+        "chirping"
+      ],
+      "shap_values": [
+        0.06485207518562675,
+        0.2178990920074284,
+        0.1540717831812799,
+        0.02523214789107442,
+        -0.03950657555833459,
+        -0.016221916768699884,
+        -0.10632311424706131,
+        0.13549373263958842,
+        -0.044727486558258533,
+        0.09951010067015886,
+        0.10766525380313396,
+        -0.0006078612059354782,
+        0.03327972628176212,
+        0.09002715907990932
+      ]
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 3,
+      "text": "just move those goals posts... next if they don't win the world cup its wenger out again?",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.008270819671452045,
+      "prob_sarcasm": 0.991729199886322,
+      "tokens": [
+        "just ",
+        "move ",
+        "those ",
+        "goals ",
+        "posts... ",
+        "next ",
+        "if ",
+        "they ",
+        "don'",
+        "t ",
+        "win ",
+        "the ",
+        "world ",
+        "cup ",
+        "its ",
+        "wenger ",
+        "out ",
+        "again"
+      ],
+      "shap_values": [
+        0.22362409438937902,
+        -0.03473041020333767,
+        0.11234393762424588,
+        0.09390645520761609,
+        -0.17143924511037767,
+        -0.020877191564068198,
+        0.014568072743713856,
+        0.10854397201910615,
+        0.019363215076737106,
+        0.05127136560622603,
+        -0.04777297284454107,
+        0.01827809726819396,
+        0.08378243379411288,
+        0.14559341649874114,
+        -0.06963482266291976,
+        0.05971398635301739,
+        0.006735990988090634,
+        0.12448170385323465
+      ]
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 4,
+      "text": "another boring morning walk ho-hum",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.17530685663223267,
+      "prob_sarcasm": 0.8246931433677673,
+      "tokens": [
+        "another ",
+        "boring ",
+        "morning ",
+        "walk ",
+        "ho-",
+        "hum"
+      ],
+      "shap_values": [
+        0.16526196035556495,
+        0.2119663085322827,
+        -0.05270407092757523,
+        -0.26171219744719565,
+        0.03443939611315727,
+        0.4584372229874134
+      ]
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 5,
+      "text": "you made offers for players! way to go!",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.004889394622296095,
+      "prob_sarcasm": 0.9951105713844299,
+      "tokens": [
+        "you ",
+        "made ",
+        "offers ",
+        "for ",
+        "players! ",
+        "way ",
+        "to ",
+        "go"
+      ],
+      "shap_values": [
+        0.12422607280313969,
+        -0.10574584826827049,
+        -0.04736644867807627,
+        -0.08270750846713781,
+        0.11208962509408593,
+        0.5689116441644728,
+        0.0681008487008512,
+        0.08862806065008044
+      ]
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 1,
+      "text": "do the still work? why gen z are getting their kicks elsewhere | the drum",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9924498796463013,
+      "prob_sarcasm": 0.007550145033746958,
+      "tokens": [
+        "do ",
+        "the ",
+        "still ",
+        "work? ",
+        "why ",
+        "gen ",
+        "z ",
+        "are ",
+        "getting ",
+        "their ",
+        "kicks ",
+        "elsewhere | ",
+        "the ",
+        "drum"
+      ],
+      "shap_values": [
+        -0.042822493240237236,
+        -0.04625450121238828,
+        0.02178056596312672,
+        -0.007033729110844433,
+        0.014454007323365659,
+        -0.04328977322438732,
+        -0.017673779977485538,
+        -0.022343312273733318,
+        -0.013061218749498948,
+        -0.002513704908778891,
+        0.005578814976615831,
+        -0.031460429570870474,
+        -0.07074859330896288,
+        -0.006066301721148193
+      ]
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 2,
+      "text": "are we over-drugging our kids?",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.7920965552330017,
+      "prob_sarcasm": 0.2079034298658371,
+      "tokens": [
+        "are ",
+        "we ",
+        "over-",
+        "drugging ",
+        "our ",
+        "kids"
+      ],
+      "shap_values": [
+        -0.06628526002168655,
+        -0.028690718114376068,
+        -0.12113896338269114,
+        0.10976484743878245,
+        -0.038510519079864025,
+        0.0688278554007411
+      ]
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 3,
+      "text": "politico: clinton amps up at new hampshire cattle call",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9964715242385864,
+      "prob_sarcasm": 0.0035284929908812046,
+      "tokens": [
+        "politico: ",
+        "clinton ",
+        "amps ",
+        "up ",
+        "at ",
+        "new ",
+        "hampshire ",
+        "cattle ",
+        "call"
+      ],
+      "shap_values": [
+        -0.07670245802728459,
+        -0.07913358614314348,
+        0.005607795814285055,
+        0.018097807798767462,
+        -0.053449741419171914,
+        0.0019301476131659001,
+        -0.034317539699259214,
+        -0.02112904751265887,
+        -0.026379467162769288
+      ]
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 4,
+      "text": "are final exams a victim to parcc testing? by \u2026",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.994862973690033,
+      "prob_sarcasm": 0.005137029569596052,
+      "tokens": [
+        "are ",
+        "final ",
+        "exams ",
+        "a ",
+        "victim ",
+        "to ",
+        "parcc ",
+        "testing? ",
+        "by"
+      ],
+      "shap_values": [
+        -0.011752064572647214,
+        -0.05160142434760928,
+        -0.053968567750416696,
+        -0.017470895661972463,
+        -0.05674005451146513,
+        -0.038526733056642115,
+        -0.013354601745959371,
+        0.10131105413893238,
+        -0.11163157958071679
+      ]
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 5,
+      "text": "rt abcnewsmelb: treasurer timpallas says there are 'no plans' to scrap stamp duty concessions for first time\u2026",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.997669517993927,
+      "prob_sarcasm": 0.0023304049391299486,
+      "tokens": [
+        "rt ",
+        "abcnewsmelb: ",
+        "treasurer ",
+        "timpallas ",
+        "says ",
+        "there ",
+        "are '",
+        "no ",
+        "plans' ",
+        "to ",
+        "scrap ",
+        "stamp ",
+        "duty ",
+        "concessions ",
+        "for ",
+        "first ",
+        "time"
+      ],
+      "shap_values": [
+        0.00020644257892854512,
+        -0.024938757793279365,
+        -0.035905146069126204,
+        -0.005527998873731121,
+        -0.009543696374748833,
+        0.01992967563273851,
+        -0.12301227383431979,
+        0.04720059045939706,
+        -0.02482195250922814,
+        -0.033069146011257544,
+        0.024170291537302546,
+        -0.03375535331724677,
+        -0.020857539799180813,
+        -0.009958744354662485,
+        -0.04379731421795441,
+        0.008337576051417273,
+        0.0012895793479401618
+      ]
+    },
+    {
+      "category": "false_positive",
+      "rank": 1,
+      "text": "\"the purpose of the military is to kill people &amp; break things.\" spoken like a true christian...",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.047115471214056015,
+      "prob_sarcasm": 0.9528844952583313,
+      "tokens": [
+        "\"",
+        "the ",
+        "purpose ",
+        "of ",
+        "the ",
+        "military ",
+        "is ",
+        "to ",
+        "kill ",
+        "people &",
+        "amp; ",
+        "break ",
+        "things.\" ",
+        "spoken ",
+        "like ",
+        "a ",
+        "true ",
+        "christian"
+      ],
+      "shap_values": [
+        -0.033980050357058644,
+        -0.04374329769052565,
+        0.09918003133498132,
+        -0.03558837459422648,
+        -0.04737696738447994,
+        -0.07145018724258989,
+        0.05541479017119855,
+        0.02806393790524453,
+        0.07556815433781594,
+        0.034296144847758114,
+        -0.024265592452138662,
+        -0.06627603573724627,
+        0.23543867748230696,
+        0.004575346130877733,
+        0.19992457027547061,
+        -0.06581976287998259,
+        0.18711441848427057,
+        0.1575889913365245
+      ]
+    },
+    {
+      "category": "false_positive",
+      "rank": 2,
+      "text": "quite disappointed to see someone taking coke in front of me is all you need not !!!",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.054374877363443375,
+      "prob_sarcasm": 0.9456250667572021,
+      "tokens": [
+        "quite ",
+        "disappointed ",
+        "to ",
+        "see ",
+        "someone ",
+        "taking ",
+        "coke ",
+        "in ",
+        "front ",
+        "of ",
+        "me ",
+        "is ",
+        "all ",
+        "you ",
+        "need ",
+        "not"
+      ],
+      "shap_values": [
+        0.17332873365376145,
+        0.2189102644333616,
+        -0.01498823391739279,
+        -0.07532406889367849,
+        0.12041375762782991,
+        -0.09254097798839211,
+        0.023316481616348028,
+        -0.010210494743660092,
+        0.0020140823908150196,
+        -0.0712203555740416,
+        0.1271058232523501,
+        0.06460213987156749,
+        -0.07735525164753199,
+        0.05282664392143488,
+        0.05257574049755931,
+        0.19709151284769177
+      ]
+    },
+    {
+      "category": "false_positive",
+      "rank": 3,
+      "text": "to twitter virgins please retweet, what are you saving yourself for? a mitzvah party",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.4499457776546478,
+      "prob_sarcasm": 0.5500542521476746,
+      "tokens": [
+        "to ",
+        "twitter ",
+        "virgins ",
+        "please ",
+        "retweet, ",
+        "what ",
+        "are ",
+        "you ",
+        "saving ",
+        "yourself ",
+        "for? ",
+        "a ",
+        "mitzvah ",
+        "party"
+      ],
+      "shap_values": [
+        -0.004277976229786873,
+        0.026389649137854576,
+        0.05414831335656345,
+        0.19146266137249768,
+        -0.07371384114958346,
+        0.1549841423984617,
+        -0.3234815720934421,
+        0.09047440416179597,
+        0.09352396300528198,
+        0.10231084714177996,
+        -0.05077353760134429,
+        -0.05499332014005631,
+        0.04452724033035338,
+        0.030468695098534226
+      ]
+    },
+    {
+      "category": "false_positive",
+      "rank": 4,
+      "text": "....to call itself decent\"",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.4418763518333435,
+      "prob_sarcasm": 0.5581237077713013,
+      "tokens": [
+        "....",
+        "to ",
+        "call ",
+        "itself ",
+        "decent"
+      ],
+      "shap_values": [
+        0.014881689101457596,
+        -0.09728219732642174,
+        0.09652916714549065,
+        0.019544772803783417,
+        0.4929252602159977
+      ]
+    },
+    {
+      "category": "false_positive",
+      "rank": 5,
+      "text": "branding for a blogger.",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.46412402391433716,
+      "prob_sarcasm": 0.5358759760856628,
+      "tokens": [
+        "branding ",
+        "for ",
+        "a ",
+        "blogger"
+      ],
+      "shap_values": [
+        -0.11511407466605306,
+        -0.016591039951890707,
+        -0.00046489317901432514,
+        -0.05987164261750877
+      ]
+    },
+    {
+      "category": "false_negative",
+      "rank": 1,
+      "text": "no one named tom can fill out the survey",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.5936404466629028,
+      "prob_sarcasm": 0.40635955333709717,
+      "tokens": [
+        "no ",
+        "one ",
+        "named ",
+        "tom ",
+        "can ",
+        "fill ",
+        "out ",
+        "the ",
+        "survey"
+      ],
+      "shap_values": [
+        0.19492968812119216,
+        0.040938362828455865,
+        -0.03031694353558123,
+        0.13388136448338628,
+        -0.005166869377717376,
+        0.013964742422103882,
+        -0.07998255110578611,
+        -0.1606691800407134,
+        0.029773405753076077
+      ]
+    },
+    {
+      "category": "false_negative",
+      "rank": 2,
+      "text": "5 of 5 big furniture items choose your little pinky toe",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9890540838241577,
+      "prob_sarcasm": 0.010945837013423443,
+      "tokens": [
+        "5 ",
+        "of ",
+        "5 ",
+        "big ",
+        "furniture ",
+        "items ",
+        "choose ",
+        "your ",
+        "little ",
+        "pinky ",
+        "toe"
+      ],
+      "shap_values": [
+        -0.08307689503999427,
+        -0.0006004197639413178,
+        -0.10026654723333195,
+        0.01647959294496104,
+        -0.020376971253426746,
+        -0.0063352327269967645,
+        -0.037536566640483215,
+        -0.026655502704670653,
+        -0.013942099554697052,
+        0.03443820224492811,
+        -0.02018636342836544
+      ]
+    },
+    {
+      "category": "false_negative",
+      "rank": 3,
+      "text": "home. looking at the dirty washing, lack of bread, the unpacking &amp; putting away. wondering who will be doing that then.",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.5349457859992981,
+      "prob_sarcasm": 0.4650541841983795,
+      "tokens": [
+        "home. ",
+        "looking ",
+        "at ",
+        "the ",
+        "dirty ",
+        "washing, ",
+        "lack ",
+        "of ",
+        "bread, ",
+        "the ",
+        "unpacking &",
+        "amp; ",
+        "putting ",
+        "away. ",
+        "wondering ",
+        "who ",
+        "will ",
+        "be ",
+        "doing ",
+        "that ",
+        "then"
+      ],
+      "shap_values": [
+        -0.06045633216854185,
+        0.001805420615710318,
+        -0.052021996467374265,
+        -0.06510768213775009,
+        0.05181049136444926,
+        0.03217788063921034,
+        0.0886815496487543,
+        0.0342385534895584,
+        0.013886092347092927,
+        0.01166766753885895,
+        -0.03466429904801771,
+        -0.11795212241122499,
+        -0.007610833097714931,
+        -0.16329422284616157,
+        0.050136220757849514,
+        0.1684604719048366,
+        0.002490570768713951,
+        -0.0064222924411296844,
+        0.025970562011934817,
+        0.1458880609134212,
+        0.09750489494763315
+      ]
+    },
+    {
+      "category": "false_negative",
+      "rank": 4,
+      "text": "thomas oliver on the fly via",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9002269506454468,
+      "prob_sarcasm": 0.09977312386035919,
+      "tokens": [
+        "thomas ",
+        "oliver ",
+        "on ",
+        "the ",
+        "fly ",
+        "via"
+      ],
+      "shap_values": [
+        -0.02225507760886103,
+        -0.032122301519848406,
+        -0.04227084119338542,
+        0.003708847681991756,
+        0.007704919669777155,
+        -0.08399684261530638
+      ]
+    },
+    {
+      "category": "false_negative",
+      "rank": 5,
+      "text": "perfect for every girl! and ! sparkling_heart sparkling_heart sparkling_heart",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.8495646119117737,
+      "prob_sarcasm": 0.15043532848358154,
+      "tokens": [
+        "perfect ",
+        "for ",
+        "every ",
+        "girl! ",
+        "and ! ",
+        "sparkling_heart ",
+        "sparkling_heart ",
+        "sparkling_heart"
+      ],
+      "shap_values": [
+        0.015987535007297993,
+        0.02103827055543661,
+        -0.051401648204773664,
+        0.14030614448711276,
+        -0.05988480802625418,
+        -0.07017476763576269,
+        -0.05801524128764868,
+        -0.05642515700310469
+      ]
+    }
+  ]
+}
