@@ -219,7 +219,7 @@ def explain_examples(examples, predict_proba, model_name, dataset_name,
             )
             html_path = os.path.join(
                 output_dir,
-                f"lime_{model_name}_{dataset_name}_{i+1:02d}_{ex['category']}.html",
+                f"{i+1:02d}_{ex['category']}.html",
             )
             exp.save_to_file(html_path)
 
@@ -249,7 +249,7 @@ def explain_examples(examples, predict_proba, model_name, dataset_name,
         "top_words_pushing_toward_not_sarcasm": not_pushers.most_common(30),
         "explanations": summary_records,
     }
-    summary_path = os.path.join(output_dir, f"lime_{model_name}_{dataset_name}_summary.json")
+    summary_path = os.path.join(output_dir, "summary.json")
     with open(summary_path, "w") as f:
         json.dump(summary, f, indent=2)
     logger.info(f"[lime] Saved summary to {summary_path}")
@@ -274,7 +274,7 @@ def main():
                         log_dir=config["paths"]["logs"])
     logger.info(f"[lime] Model: {args.model} | Dataset: {args.dataset}")
 
-    output_dir = os.path.join(PROJECT_ROOT, "outputs", "interpretability")
+    output_dir = os.path.join(PROJECT_ROOT, "outputs", "interpretability", "lime", f"{args.model}_{args.dataset}")
     os.makedirs(output_dir, exist_ok=True)
 
     test_df = load_test_data(args.dataset, config, logger)

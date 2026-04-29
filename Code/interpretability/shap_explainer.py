@@ -55,11 +55,13 @@ def run_shap(predict_proba, examples, model_name, dataset_name, config, output_d
     def f(texts):
         return predict_proba(list(texts))[:, 1]
 
-    explainer = shap.Explainer(f, masker, output_names=["Sarcasm"])
+    explainer = shap.Explainer(f, masker)
 
     # Local explanations on the picked examples
     texts = [ex["text"] for ex in examples]
-    n_samples = config["interpretability"].get("shap_num_samples", 50)
+    # SHAP partition explainer needs at least 2*n_tokens evaluations per example.
+    # Config default of 50 is too tight; bump to a safer floor.
+    n_samples = max(config["interpretability"].get("shap_num_samples", 50), 500)
     logger.info(f"[shap] Computing SHAP values on {len(texts)} examples (n_samples={n_samples})...")
     shap_values = explainer(texts, max_evals=n_samples, silent=True)
 
@@ -70,7 +72,7 @@ def run_shap(predict_proba, examples, model_name, dataset_name, config, output_d
             shap.plots.text(shap_values[i], display=False)
             local_path = os.path.join(
                 output_dir,
-                f"shap_{model_name}_{dataset_name}_local_{i+1:02d}_{ex['category']}.html",
+                f"local_{i+1:02d}_{ex['category']}.html",
             )
             # SHAP's text plot is HTML-based; save manually
             html = shap.plots.text(shap_values[i], display=False)
@@ -120,7 +122,7 @@ def run_shap(predict_proba, examples, model_name, dataset_name, config, output_d
         axes[1].set_xlabel("Cumulative |SHAP value|")
     plt.tight_layout()
     summary_plot_path = os.path.join(
-        output_dir, f"shap_{model_name}_{dataset_name}_summary_plot.png"
+        output_dir, "summary_plot.png"
     )
     plt.savefig(summary_plot_path, dpi=120)
     plt.close()
@@ -143,7 +145,7 @@ def run_shap(predict_proba, examples, model_name, dataset_name, config, output_d
             for i, ex in enumerate(examples)
         ],
     }
-    summary_path = os.path.join(output_dir, f"shap_{model_name}_{dataset_name}_summary.json")
+    summary_path = os.path.join(output_dir, "summary.json")
     with open(summary_path, "w") as fh:
         json.dump(summary, fh, indent=2)
     logger.info(f"[shap] Saved summary JSON to {summary_path}")
@@ -166,7 +168,7 @@ def main():
                         log_dir=config["paths"]["logs"])
     logger.info(f"[shap] Model: {args.model} | Dataset: {args.dataset}")
 
-    output_dir = os.path.join(PROJECT_ROOT, "outputs", "interpretability")
+    output_dir = os.path.join(PROJECT_ROOT, "outputs", "interpretability", "shap", f"{args.model}_{args.dataset}")
     os.makedirs(output_dir, exist_ok=True)
 
     test_df = load_test_data(args.dataset, config, logger)

@@ -1,0 +1,1171 @@
+{
+  "model": "roberta",
+  "dataset": "twitter_no_hashtags",
+  "num_explanations": 20,
+  "lime_config": {
+    "num_features": 10,
+    "num_samples": 500
+  },
+  "top_words_pushing_toward_sarcasm": [
+    [
+      "love",
+      0.48012578312903353
+    ],
+    [
+      "another",
+      0.402532992389695
+    ],
+    [
+      "like",
+      0.32533578599437435
+    ],
+    [
+      "no",
+      0.3202943326836691
+    ],
+    [
+      "the",
+      0.28556271654135235
+    ],
+    [
+      "to",
+      0.26755767285943444
+    ],
+    [
+      "true",
+      0.20637743251061716
+    ],
+    [
+      "way",
+      0.19626404332962952
+    ],
+    [
+      "decent",
+      0.19606664339271102
+    ],
+    [
+      "one",
+      0.1930098790330002
+    ],
+    [
+      "boring",
+      0.19224877862830453
+    ],
+    [
+      "being",
+      0.17431689480685444
+    ],
+    [
+      "quite",
+      0.16492859582854447
+    ],
+    [
+      "i",
+      0.15796608911432464
+    ],
+    [
+      "call",
+      0.15702302845651195
+    ],
+    [
+      "cup",
+      0.15478800564550915
+    ],
+    [
+      "hum",
+      0.1534880649112417
+    ],
+    [
+      "players",
+      0.14623749919969115
+    ],
+    [
+      "disappointed",
+      0.1418033638656545
+    ],
+    [
+      "a",
+      0.1397197524697452
+    ],
+    [
+      "you",
+      0.13755775131141745
+    ],
+    [
+      "just",
+      0.13718385208026845
+    ],
+    [
+      "kill",
+      0.13508555017259438
+    ],
+    [
+      "better",
+      0.13269616665734338
+    ],
+    [
+      "t",
+      0.11058638432075184
+    ],
+    [
+      "someone",
+      0.1100754097101471
+    ],
+    [
+      "lack",
+      0.10581062623397501
+    ],
+    [
+      "morning",
+      0.10507779545548009
+    ],
+    [
+      "what",
+      0.08937417489824132
+    ],
+    [
+      "then",
+      0.08790907783110162
+    ]
+  ],
+  "top_words_pushing_toward_not_sarcasm": [
+    [
+      "are",
+      0.46012284819592464
+    ],
+    [
+      "survey",
+      0.19345579470819604
+    ],
+    [
+      "the",
+      0.135911544462469
+    ],
+    [
+      "blogger",
+      0.12639997214160184
+    ],
+    [
+      "sparkling_heart",
+      0.1261260136398233
+    ],
+    [
+      "choose",
+      0.12314644335463285
+    ],
+    [
+      "elsewhere",
+      0.1078477884372223
+    ],
+    [
+      "drum",
+      0.0977395182400735
+    ],
+    [
+      "to",
+      0.0846091122091247
+    ],
+    [
+      "fill",
+      0.07969987402594839
+    ],
+    [
+      "party",
+      0.06723979407312182
+    ],
+    [
+      "5",
+      0.052392719552301265
+    ],
+    [
+      "will",
+      0.05140453020093862
+    ],
+    [
+      "of",
+      0.03972970386304041
+    ],
+    [
+      "oliver",
+      0.0396074717294276
+    ],
+    [
+      "kids",
+      0.038202044140366834
+    ],
+    [
+      "away",
+      0.038128324610083975
+    ],
+    [
+      "every",
+      0.03753469904126142
+    ],
+    [
+      "do",
+      0.0373871519076139
+    ],
+    [
+      "by",
+      0.03700124595220262
+    ],
+    [
+      "out",
+      0.035110136361181606
+    ],
+    [
+      "still",
+      0.034101456643095406
+    ],
+    [
+      "z",
+      0.032315475325210494
+    ],
+    [
+      "work",
+      0.03087720711352461
+    ],
+    [
+      "furniture",
+      0.030151364779938072
+    ],
+    [
+      "via",
+      0.03006370288270873
+    ],
+    [
+      "break",
+      0.02840608261582454
+    ],
+    [
+      "named",
+      0.026008818688192183
+    ],
+    [
+      "on",
+      0.023335661760022244
+    ],
+    [
+      "toe",
+      0.02138646407245078
+    ]
+  ],
+  "explanations": [
+    {
+      "category": "correct_sarcasm",
+      "rank": 1,
+      "text": "i love how i buy clothes and accessories for and then don't wear them.",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.007049398496747017,
+      "prob_sarcasm": 0.9929506778717041,
+      "word_weights_for_sarcasm": [
+        [
+          "love",
+          0.23813675624657207
+        ],
+        [
+          "buy",
+          0.08052272585466347
+        ],
+        [
+          "how",
+          0.06428921029353118
+        ],
+        [
+          "t",
+          0.06222509814449214
+        ],
+        [
+          "wear",
+          0.0588219683458953
+        ],
+        [
+          "i",
+          0.05174886388482758
+        ],
+        [
+          "them",
+          0.038403330334936016
+        ],
+        [
+          "i",
+          0.033310388929023944
+        ],
+        [
+          "clothes",
+          0.029312203260927972
+        ],
+        [
+          "then",
+          0.028538228606144172
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_01_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 2,
+      "text": "i love being woken up to the sounds of fucking.... better than birds chirping",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.010351241566240788,
+      "prob_sarcasm": 0.989648699760437,
+      "word_weights_for_sarcasm": [
+        [
+          "love",
+          0.2419890268824615
+        ],
+        [
+          "being",
+          0.17431689480685444
+        ],
+        [
+          "better",
+          0.13269616665734338
+        ],
+        [
+          "i",
+          0.07290683630047312
+        ],
+        [
+          "than",
+          0.04830409246174428
+        ],
+        [
+          "fucking",
+          0.048168760141116665
+        ],
+        [
+          "sounds",
+          0.04317657957911418
+        ],
+        [
+          "to",
+          0.038091292548623784
+        ],
+        [
+          "chirping",
+          0.03805075867065994
+        ],
+        [
+          "up",
+          0.037109757576156685
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_02_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 3,
+      "text": "just move those goals posts... next if they don't win the world cup its wenger out again?",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.008270819671452045,
+      "prob_sarcasm": 0.991729199886322,
+      "word_weights_for_sarcasm": [
+        [
+          "cup",
+          0.15478800564550915
+        ],
+        [
+          "just",
+          0.13718385208026845
+        ],
+        [
+          "they",
+          0.07942457966838695
+        ],
+        [
+          "move",
+          0.07519227959322064
+        ],
+        [
+          "next",
+          0.06814750175690741
+        ],
+        [
+          "the",
+          0.06188227435949703
+        ],
+        [
+          "t",
+          0.0483612861762597
+        ],
+        [
+          "if",
+          0.048092162531698075
+        ],
+        [
+          "those",
+          0.04589669249795972
+        ],
+        [
+          "posts",
+          0.03941536543526449
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_03_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 4,
+      "text": "another boring morning walk ho-hum",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.17530685663223267,
+      "prob_sarcasm": 0.8246931433677673,
+      "word_weights_for_sarcasm": [
+        [
+          "another",
+          0.402532992389695
+        ],
+        [
+          "boring",
+          0.19224877862830453
+        ],
+        [
+          "hum",
+          0.1534880649112417
+        ],
+        [
+          "morning",
+          0.10507779545548009
+        ],
+        [
+          "ho",
+          0.07803987625593271
+        ],
+        [
+          "walk",
+          -0.009507893011616968
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_04_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 5,
+      "text": "you made offers for players! way to go!",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.004889394622296095,
+      "prob_sarcasm": 0.9951105713844299,
+      "word_weights_for_sarcasm": [
+        [
+          "way",
+          0.19626404332962952
+        ],
+        [
+          "players",
+          0.14623749919969115
+        ],
+        [
+          "you",
+          0.08537979803319623
+        ],
+        [
+          "offers",
+          0.056523939240770746
+        ],
+        [
+          "made",
+          0.053968727955245405
+        ],
+        [
+          "go",
+          0.053519839839081304
+        ],
+        [
+          "for",
+          0.046393120277733436
+        ],
+        [
+          "to",
+          0.016547593316800422
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_05_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 1,
+      "text": "do the still work? why gen z are getting their kicks elsewhere | the drum",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9924498796463013,
+      "prob_sarcasm": 0.007550145033746958,
+      "word_weights_for_sarcasm": [
+        [
+          "elsewhere",
+          -0.1078477884372223
+        ],
+        [
+          "the",
+          -0.09965310068567534
+        ],
+        [
+          "drum",
+          -0.0977395182400735
+        ],
+        [
+          "getting",
+          0.0448187701027829
+        ],
+        [
+          "do",
+          -0.0373871519076139
+        ],
+        [
+          "the",
+          -0.03625844377679366
+        ],
+        [
+          "still",
+          -0.034101456643095406
+        ],
+        [
+          "z",
+          -0.032315475325210494
+        ],
+        [
+          "work",
+          -0.03087720711352461
+        ],
+        [
+          "are",
+          -0.02533419653975555
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_06_correct_not_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 2,
+      "text": "are we over-drugging our kids?",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.7920965552330017,
+      "prob_sarcasm": 0.2079034298658371,
+      "word_weights_for_sarcasm": [
+        [
+          "are",
+          -0.32965868382325997
+        ],
+        [
+          "over",
+          0.05067211806524264
+        ],
+        [
+          "we",
+          0.05008225062467002
+        ],
+        [
+          "kids",
+          -0.038202044140366834
+        ],
+        [
+          "drugging",
+          0.03211762206955633
+        ],
+        [
+          "our",
+          -0.016584199275185302
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_07_correct_not_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 3,
+      "text": "politico: clinton amps up at new hampshire cattle call",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9964715242385864,
+      "prob_sarcasm": 0.0035284929908812046,
+      "word_weights_for_sarcasm": [
+        [
+          "call",
+          -0.01409122042740909
+        ],
+        [
+          "up",
+          -0.011461533964790474
+        ],
+        [
+          "amps",
+          -0.010224044725152872
+        ],
+        [
+          "hampshire",
+          -0.009872880669699541
+        ],
+        [
+          "at",
+          -0.008825595445190335
+        ],
+        [
+          "new",
+          -0.006403929933636214
+        ],
+        [
+          "cattle",
+          -0.004734109995056952
+        ],
+        [
+          "politico",
+          -0.0025617776109471586
+        ],
+        [
+          "clinton",
+          -0.0012122469366690535
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_08_correct_not_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 4,
+      "text": "are final exams a victim to parcc testing? by \u2026",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.994862973690033,
+      "prob_sarcasm": 0.005137029569596052,
+      "word_weights_for_sarcasm": [
+        [
+          "by",
+          -0.03700124595220262
+        ],
+        [
+          "final",
+          -0.01742183767755943
+        ],
+        [
+          "exams",
+          -0.016476312744232044
+        ],
+        [
+          "testing",
+          -0.01562864015104953
+        ],
+        [
+          "to",
+          -0.015305148818122474
+        ],
+        [
+          "victim",
+          -0.010047785175516816
+        ],
+        [
+          "are",
+          -0.005279763008210927
+        ],
+        [
+          "parcc",
+          -0.003074907745013417
+        ],
+        [
+          "a",
+          -0.001873000365042717
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_09_correct_not_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 5,
+      "text": "rt abcnewsmelb: treasurer timpallas says there are 'no plans' to scrap stamp duty concessions for first time\u2026",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.997669517993927,
+      "prob_sarcasm": 0.0023304049391299486,
+      "word_weights_for_sarcasm": [
+        [
+          "says",
+          -0.011263706817231583
+        ],
+        [
+          "concessions",
+          -0.009372700498698296
+        ],
+        [
+          "scrap",
+          -0.007540279207418108
+        ],
+        [
+          "treasurer",
+          -0.007240228558684088
+        ],
+        [
+          "plans",
+          -0.007043886952879563
+        ],
+        [
+          "first",
+          -0.006476127083929378
+        ],
+        [
+          "to",
+          -0.005319489867125865
+        ],
+        [
+          "abcnewsmelb",
+          -0.005246529764886363
+        ],
+        [
+          "for",
+          -0.004672344748186097
+        ],
+        [
+          "timpallas",
+          -0.004202204604345064
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_10_correct_not_sarcasm.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 1,
+      "text": "\"the purpose of the military is to kill people &amp; break things.\" spoken like a true christian...",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.047115471214056015,
+      "prob_sarcasm": 0.9528844952583313,
+      "word_weights_for_sarcasm": [
+        [
+          "like",
+          0.32533578599437435
+        ],
+        [
+          "true",
+          0.20637743251061716
+        ],
+        [
+          "kill",
+          0.13508555017259438
+        ],
+        [
+          "a",
+          0.12640823868795584
+        ],
+        [
+          "christian",
+          0.08455967185704243
+        ],
+        [
+          "spoken",
+          0.08407652415657851
+        ],
+        [
+          "things",
+          0.051522861504328256
+        ],
+        [
+          "to",
+          0.037409176387633844
+        ],
+        [
+          "the",
+          0.0365641992693754
+        ],
+        [
+          "break",
+          -0.02840608261582454
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_11_false_positive.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 2,
+      "text": "quite disappointed to see someone taking coke in front of me is all you need not !!!",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.054374877363443375,
+      "prob_sarcasm": 0.9456250667572021,
+      "word_weights_for_sarcasm": [
+        [
+          "quite",
+          0.16492859582854447
+        ],
+        [
+          "disappointed",
+          0.1418033638656545
+        ],
+        [
+          "someone",
+          0.1100754097101471
+        ],
+        [
+          "to",
+          0.10634923511571069
+        ],
+        [
+          "coke",
+          0.0786655860205036
+        ],
+        [
+          "me",
+          0.07793471805412575
+        ],
+        [
+          "is",
+          0.05607089649794756
+        ],
+        [
+          "taking",
+          0.05008832956222132
+        ],
+        [
+          "see",
+          0.047724661838250415
+        ],
+        [
+          "not",
+          0.043245181543202366
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_12_false_positive.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 3,
+      "text": "to twitter virgins please retweet, what are you saving yourself for? a mitzvah party",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.4499457776546478,
+      "prob_sarcasm": 0.5500542521476746,
+      "word_weights_for_sarcasm": [
+        [
+          "are",
+          -0.09985020482469818
+        ],
+        [
+          "what",
+          0.08937417489824132
+        ],
+        [
+          "please",
+          0.06928489211611052
+        ],
+        [
+          "party",
+          -0.06723979407312182
+        ],
+        [
+          "to",
+          -0.06398447352387637
+        ],
+        [
+          "twitter",
+          0.06327043339026826
+        ],
+        [
+          "mitzvah",
+          0.0615714288610873
+        ],
+        [
+          "saving",
+          0.061058661271223405
+        ],
+        [
+          "you",
+          0.05217795327822124
+        ],
+        [
+          "virgins",
+          0.04692556300705212
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_13_false_positive.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 4,
+      "text": "....to call itself decent\"",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.4418763518333435,
+      "prob_sarcasm": 0.5581237077713013,
+      "word_weights_for_sarcasm": [
+        [
+          "decent",
+          0.19606664339271102
+        ],
+        [
+          "call",
+          0.15702302845651195
+        ],
+        [
+          "itself",
+          0.0867565807873172
+        ],
+        [
+          "to",
+          0.06916037549066568
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_14_false_positive.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 5,
+      "text": "branding for a blogger.",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.46412402391433716,
+      "prob_sarcasm": 0.5358759760856628,
+      "word_weights_for_sarcasm": [
+        [
+          "blogger",
+          -0.12639997214160184
+        ],
+        [
+          "branding",
+          0.0740021516221246
+        ],
+        [
+          "a",
+          0.01331151378178935
+        ],
+        [
+          "for",
+          -0.010840085230165367
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_15_false_positive.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 1,
+      "text": "no one named tom can fill out the survey",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.5936404466629028,
+      "prob_sarcasm": 0.40635955333709717,
+      "word_weights_for_sarcasm": [
+        [
+          "no",
+          0.3202943326836691
+        ],
+        [
+          "survey",
+          -0.19345579470819604
+        ],
+        [
+          "one",
+          0.1930098790330002
+        ],
+        [
+          "the",
+          0.12365776922696255
+        ],
+        [
+          "fill",
+          -0.07969987402594839
+        ],
+        [
+          "can",
+          0.061493307804123674
+        ],
+        [
+          "out",
+          -0.035110136361181606
+        ],
+        [
+          "named",
+          -0.026008818688192183
+        ],
+        [
+          "tom",
+          0.01125950996319455
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_16_false_negative.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 2,
+      "text": "5 of 5 big furniture items choose your little pinky toe",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9890540838241577,
+      "prob_sarcasm": 0.010945837013423443,
+      "word_weights_for_sarcasm": [
+        [
+          "choose",
+          -0.12314644335463285
+        ],
+        [
+          "of",
+          -0.03972970386304041
+        ],
+        [
+          "5",
+          -0.034408021697773114
+        ],
+        [
+          "furniture",
+          -0.030151364779938072
+        ],
+        [
+          "toe",
+          -0.02138646407245078
+        ],
+        [
+          "5",
+          -0.017984697854528147
+        ],
+        [
+          "items",
+          -0.014851471204996488
+        ],
+        [
+          "your",
+          0.011451543255570068
+        ],
+        [
+          "pinky",
+          -0.009889111050977086
+        ],
+        [
+          "big",
+          0.009534669931356208
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_17_false_negative.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 3,
+      "text": "home. looking at the dirty washing, lack of bread, the unpacking &amp; putting away. wondering who will be doing that then.",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.5349457859992981,
+      "prob_sarcasm": 0.4650541841983795,
+      "word_weights_for_sarcasm": [
+        [
+          "lack",
+          0.10581062623397501
+        ],
+        [
+          "wondering",
+          0.08523778403590186
+        ],
+        [
+          "washing",
+          0.07939346103447739
+        ],
+        [
+          "dirty",
+          0.0729996849497983
+        ],
+        [
+          "doing",
+          0.07289932054212626
+        ],
+        [
+          "of",
+          0.06330817629162956
+        ],
+        [
+          "that",
+          0.060854730980665656
+        ],
+        [
+          "then",
+          0.059370849224957445
+        ],
+        [
+          "will",
+          -0.05140453020093862
+        ],
+        [
+          "away",
+          -0.038128324610083975
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_18_false_negative.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 4,
+      "text": "thomas oliver on the fly via",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9002269506454468,
+      "prob_sarcasm": 0.09977312386035919,
+      "word_weights_for_sarcasm": [
+        [
+          "the",
+          0.06345847368551737
+        ],
+        [
+          "oliver",
+          -0.0396074717294276
+        ],
+        [
+          "fly",
+          0.03399763463650163
+        ],
+        [
+          "via",
+          -0.03006370288270873
+        ],
+        [
+          "on",
+          -0.023335661760022244
+        ],
+        [
+          "thomas",
+          -0.0009224807806220032
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_19_false_negative.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 5,
+      "text": "perfect for every girl! and ! sparkling_heart sparkling_heart sparkling_heart",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.8495646119117737,
+      "prob_sarcasm": 0.15043532848358154,
+      "word_weights_for_sarcasm": [
+        [
+          "sparkling_heart",
+          -0.057637664524544406
+        ],
+        [
+          "perfect",
+          0.05559804825270087
+        ],
+        [
+          "sparkling_heart",
+          -0.04851961164340091
+        ],
+        [
+          "every",
+          -0.03753469904126142
+        ],
+        [
+          "for",
+          0.034597346885865125
+        ],
+        [
+          "girl",
+          0.03225693071013268
+        ],
+        [
+          "sparkling_heart",
+          -0.019968737471877964
+        ],
+        [
+          "and",
+          -0.010656559591890859
+        ]
+      ],
+      "html_file": "lime_roberta_twitter_no_hashtags_20_false_negative.html"
+    }
+  ]
+}

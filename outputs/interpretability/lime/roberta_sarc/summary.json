@@ -1,0 +1,1059 @@
+{
+  "model": "roberta",
+  "dataset": "sarc",
+  "num_explanations": 20,
+  "lime_config": {
+    "num_features": 10,
+    "num_samples": 500
+  },
+  "top_words_pushing_toward_sarcasm": [
+    [
+      "for",
+      0.5825366068567049
+    ],
+    [
+      "forgot",
+      0.5146355813015715
+    ],
+    [
+      "noob",
+      0.4860706215599197
+    ],
+    [
+      "just",
+      0.44358816663865774
+    ],
+    [
+      "about",
+      0.3873024629758619
+    ],
+    [
+      "upvotat",
+      0.3510025102523419
+    ],
+    [
+      "using",
+      0.32948297897831363
+    ],
+    [
+      "you",
+      0.3144263085770921
+    ],
+    [
+      "t",
+      0.30752688026009134
+    ],
+    [
+      "firefox",
+      0.3010325653823119
+    ],
+    [
+      "voi",
+      0.29383022987277835
+    ],
+    [
+      "serves",
+      0.27469905727770216
+    ],
+    [
+      "that",
+      0.2299716049890242
+    ],
+    [
+      "but",
+      0.22889696200036605
+    ],
+    [
+      "the",
+      0.21965942411729192
+    ],
+    [
+      "kilogram",
+      0.21845210973405932
+    ],
+    [
+      "fake",
+      0.2175451937562379
+    ],
+    [
+      "thanks",
+      0.20563647130186719
+    ],
+    [
+      "right",
+      0.19342720968843194
+    ],
+    [
+      "because",
+      0.1789898757265897
+    ],
+    [
+      "sure",
+      0.1759456009307246
+    ],
+    [
+      "porn",
+      0.1705083544644448
+    ],
+    [
+      "photographed",
+      0.16123066597451027
+    ],
+    [
+      "love",
+      0.15910569513736822
+    ],
+    [
+      "thought",
+      0.15820321885205332
+    ],
+    [
+      "faceti",
+      0.15801582550091722
+    ],
+    [
+      "what",
+      0.1532154922479972
+    ],
+    [
+      "re",
+      0.15065496886536128
+    ],
+    [
+      "knows",
+      0.14923552059283685
+    ],
+    [
+      "restul",
+      0.14251399449770494
+    ]
+  ],
+  "top_words_pushing_toward_not_sarcasm": [
+    [
+      "you",
+      0.22064218057176446
+    ],
+    [
+      "t",
+      0.08682370839249069
+    ],
+    [
+      "said",
+      0.06574438414534474
+    ],
+    [
+      "didn",
+      0.0637438398807183
+    ],
+    [
+      "a",
+      0.06061161398839681
+    ],
+    [
+      "there",
+      0.06058802535108815
+    ],
+    [
+      "real",
+      0.04995036490991792
+    ],
+    [
+      "automatically",
+      0.044265858150375585
+    ],
+    [
+      "home",
+      0.04166441014619447
+    ],
+    [
+      "am",
+      0.03928897346603304
+    ],
+    [
+      "i",
+      0.029385043306377097
+    ],
+    [
+      "upvoted",
+      0.028448289504055327
+    ],
+    [
+      "with",
+      0.023258331232749126
+    ],
+    [
+      "lower",
+      0.016128467649107588
+    ],
+    [
+      "lash",
+      0.013416803446450742
+    ],
+    [
+      "guy",
+      0.010533582229216316
+    ],
+    [
+      "horse",
+      0.005811896820241727
+    ],
+    [
+      "have",
+      0.003990821926724263
+    ],
+    [
+      "isn",
+      0.003593765131889384
+    ],
+    [
+      "came",
+      0.0030973557907756355
+    ],
+    [
+      "on",
+      0.002310193484787326
+    ],
+    [
+      "of",
+      0.0020037062333577074
+    ],
+    [
+      "still",
+      0.0014499731242589593
+    ]
+  ],
+  "explanations": [
+    {
+      "category": "correct_sarcasm",
+      "rank": 1,
+      "text": "serves you right for using firefox!",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.04442659020423889,
+      "prob_sarcasm": 0.9555733799934387,
+      "word_weights_for_sarcasm": [
+        [
+          "for",
+          0.3396830382129673
+        ],
+        [
+          "using",
+          0.32948297897831363
+        ],
+        [
+          "firefox",
+          0.3010325653823119
+        ],
+        [
+          "serves",
+          0.27469905727770216
+        ],
+        [
+          "right",
+          0.19342720968843194
+        ],
+        [
+          "you",
+          0.07384386509518892
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_01_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 2,
+      "text": "you forgot",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.002761063864454627,
+      "prob_sarcasm": 0.9972388744354248,
+      "word_weights_for_sarcasm": [
+        [
+          "forgot",
+          0.5146355813015715
+        ],
+        [
+          "you",
+          -0.22064218057176446
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_02_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 3,
+      "text": "you're just a jealous noob",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.16971267759799957,
+      "prob_sarcasm": 0.8302873373031616,
+      "word_weights_for_sarcasm": [
+        [
+          "noob",
+          0.4860706215599197
+        ],
+        [
+          "just",
+          0.22049390339315325
+        ],
+        [
+          "re",
+          0.15065496886536128
+        ],
+        [
+          "you",
+          0.07634939729343661
+        ],
+        [
+          "a",
+          -0.06061161398839681
+        ],
+        [
+          "jealous",
+          0.052857054955067956
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_03_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 4,
+      "text": "thanks for that tip that improved my life in a meaningful way.",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.04166867583990097,
+      "prob_sarcasm": 0.9583313465118408,
+      "word_weights_for_sarcasm": [
+        [
+          "thanks",
+          0.20563647130186719
+        ],
+        [
+          "for",
+          0.14334062433373593
+        ],
+        [
+          "tip",
+          0.13138552371296625
+        ],
+        [
+          "improved",
+          0.11505834558420908
+        ],
+        [
+          "that",
+          0.10420832759997156
+        ],
+        [
+          "in",
+          0.09570571926875023
+        ],
+        [
+          "that",
+          0.08326181486346121
+        ],
+        [
+          "meaningful",
+          0.08101867943988657
+        ],
+        [
+          "way",
+          0.06656712023797043
+        ],
+        [
+          "my",
+          0.05107782222241319
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_04_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_sarcasm",
+      "rank": 5,
+      "text": "listen this guy plays a lot of fifa he knows what he is talking about.",
+      "true_label": 1,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.021107831969857216,
+      "prob_sarcasm": 0.9788922071456909,
+      "word_weights_for_sarcasm": [
+        [
+          "about",
+          0.2575952371007946
+        ],
+        [
+          "knows",
+          0.14923552059283685
+        ],
+        [
+          "is",
+          0.1360993720182546
+        ],
+        [
+          "guy",
+          0.1248367976415407
+        ],
+        [
+          "fifa",
+          0.12457499570301937
+        ],
+        [
+          "talking",
+          0.11511994004090564
+        ],
+        [
+          "plays",
+          0.11017383830314395
+        ],
+        [
+          "listen",
+          0.09533636849524858
+        ],
+        [
+          "what",
+          0.09434325149774293
+        ],
+        [
+          "he",
+          0.06156828378021808
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_05_correct_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 1,
+      "text": "you have never heard of poi, didn't you?",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.8519511222839355,
+      "prob_sarcasm": 0.14804889261722565,
+      "word_weights_for_sarcasm": [
+        [
+          "never",
+          0.06541299474568163
+        ],
+        [
+          "heard",
+          0.0644205185190866
+        ],
+        [
+          "didn",
+          -0.0637438398807183
+        ],
+        [
+          "you",
+          0.052199484939538875
+        ],
+        [
+          "of",
+          0.04928597931025131
+        ],
+        [
+          "you",
+          0.047691064295394575
+        ],
+        [
+          "t",
+          0.0467614331941473
+        ],
+        [
+          "poi",
+          0.022768280310564454
+        ],
+        [
+          "have",
+          -0.003990821926724263
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_06_correct_not_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 2,
+      "text": "still against the rules.",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9756547212600708,
+      "prob_sarcasm": 0.024345342069864273,
+      "word_weights_for_sarcasm": [
+        [
+          "against",
+          0.08202100591949524
+        ],
+        [
+          "the",
+          0.05570020234515093
+        ],
+        [
+          "rules",
+          0.0492206679690238
+        ],
+        [
+          "still",
+          -0.0014499731242589593
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_07_correct_not_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 3,
+      "text": "i remember some guy with the name \"swedishguy\" or something said racism doesn't exist in europe and got upvoted.",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9868361949920654,
+      "prob_sarcasm": 0.013163845054805279,
+      "word_weights_for_sarcasm": [
+        [
+          "said",
+          -0.06574438414534474
+        ],
+        [
+          "exist",
+          0.03573265018839549
+        ],
+        [
+          "t",
+          0.029791490297720356
+        ],
+        [
+          "racism",
+          0.028478910014956917
+        ],
+        [
+          "upvoted",
+          -0.028448289504055327
+        ],
+        [
+          "with",
+          -0.023258331232749126
+        ],
+        [
+          "and",
+          0.022616229040245555
+        ],
+        [
+          "in",
+          0.01956789982774726
+        ],
+        [
+          "i",
+          -0.01448385079834227
+        ],
+        [
+          "guy",
+          -0.010533582229216316
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_08_correct_not_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 4,
+      "text": "some types of food",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9399482011795044,
+      "prob_sarcasm": 0.060051798820495605,
+      "word_weights_for_sarcasm": [
+        [
+          "food",
+          0.06276035242502821
+        ],
+        [
+          "types",
+          0.06080175492747161
+        ],
+        [
+          "some",
+          0.045346574054388716
+        ],
+        [
+          "of",
+          -0.0020037062333577074
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_09_correct_not_sarcasm.html"
+    },
+    {
+      "category": "correct_not_sarcasm",
+      "rank": 5,
+      "text": "isn't that mascara/eyeliner on your lower lash line?",
+      "true_label": 0,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9610260725021362,
+      "prob_sarcasm": 0.03897392749786377,
+      "word_weights_for_sarcasm": [
+        [
+          "that",
+          0.04250146252559142
+        ],
+        [
+          "your",
+          0.033852696576947006
+        ],
+        [
+          "t",
+          0.02254371483302736
+        ],
+        [
+          "eyeliner",
+          0.018231411273993924
+        ],
+        [
+          "lower",
+          -0.016128467649107588
+        ],
+        [
+          "lash",
+          -0.013416803446450742
+        ],
+        [
+          "line",
+          0.011294716408011387
+        ],
+        [
+          "isn",
+          -0.003593765131889384
+        ],
+        [
+          "on",
+          -0.002310193484787326
+        ],
+        [
+          "mascara",
+          0.001975050334564319
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_10_correct_not_sarcasm.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 1,
+      "text": "i'm sure he can find a good mortgage for the new house.",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.20275703072547913,
+      "prob_sarcasm": 0.7972429394721985,
+      "word_weights_for_sarcasm": [
+        [
+          "sure",
+          0.1759456009307246
+        ],
+        [
+          "m",
+          0.10740580696891876
+        ],
+        [
+          "new",
+          0.10031499153738956
+        ],
+        [
+          "for",
+          0.08803849642178997
+        ],
+        [
+          "find",
+          0.06185949214760301
+        ],
+        [
+          "good",
+          0.049904936164892715
+        ],
+        [
+          "house",
+          0.049720914031951696
+        ],
+        [
+          "can",
+          0.047259499545710765
+        ],
+        [
+          "i",
+          0.031328411654962585
+        ],
+        [
+          "he",
+          0.029706779612256096
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_11_false_positive.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 2,
+      "text": "came here to post this",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.48972436785697937,
+      "prob_sarcasm": 0.510275661945343,
+      "word_weights_for_sarcasm": [
+        [
+          "post",
+          0.13538560219055146
+        ],
+        [
+          "this",
+          0.09510217606493632
+        ],
+        [
+          "to",
+          0.04485165797337583
+        ],
+        [
+          "here",
+          0.023288531239025422
+        ],
+        [
+          "came",
+          -0.0030973557907756355
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_12_false_positive.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 3,
+      "text": "i thought sia hated being photographed",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.22262009978294373,
+      "prob_sarcasm": 0.7773799300193787,
+      "word_weights_for_sarcasm": [
+        [
+          "photographed",
+          0.16123066597451027
+        ],
+        [
+          "thought",
+          0.15820321885205332
+        ],
+        [
+          "hated",
+          0.13368915277046162
+        ],
+        [
+          "sia",
+          0.10244289349239208
+        ],
+        [
+          "i",
+          -0.014901192508034825
+        ],
+        [
+          "being",
+          0.010944273252352033
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_13_false_positive.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 4,
+      "text": "who doesn't love some porn?",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.3205820620059967,
+      "prob_sarcasm": 0.6794179677963257,
+      "word_weights_for_sarcasm": [
+        [
+          "t",
+          0.18765840288483326
+        ],
+        [
+          "porn",
+          0.1705083544644448
+        ],
+        [
+          "love",
+          0.15910569513736822
+        ],
+        [
+          "doesn",
+          0.05737695951601317
+        ],
+        [
+          "who",
+          0.03810889259860207
+        ],
+        [
+          "some",
+          0.015116658210620615
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_14_false_positive.html"
+    },
+    {
+      "category": "false_positive",
+      "rank": 5,
+      "text": "once our technology is far enough along vr/ar devices will be the same device if you ask me.",
+      "true_label": 0,
+      "predicted_label": 1,
+      "prob_not_sarcasm": 0.2883208394050598,
+      "prob_sarcasm": 0.7116791605949402,
+      "word_weights_for_sarcasm": [
+        [
+          "ask",
+          0.1065081786351345
+        ],
+        [
+          "me",
+          0.10314795312662002
+        ],
+        [
+          "same",
+          0.07506587276560653
+        ],
+        [
+          "you",
+          0.06434249695353311
+        ],
+        [
+          "devices",
+          0.05959575427585798
+        ],
+        [
+          "will",
+          0.04967721632113569
+        ],
+        [
+          "be",
+          0.047783123765423194
+        ],
+        [
+          "device",
+          0.03360679325410106
+        ],
+        [
+          "if",
+          0.028723059816585298
+        ],
+        [
+          "along",
+          0.025053086979029762
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_15_false_positive.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 1,
+      "text": "just because there's zero real proof of something ever happening doesn't automatically mean it's fake.",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.8281194567680359,
+      "prob_sarcasm": 0.1718805581331253,
+      "word_weights_for_sarcasm": [
+        [
+          "just",
+          0.2230942632455045
+        ],
+        [
+          "fake",
+          0.2175451937562379
+        ],
+        [
+          "because",
+          0.1789898757265897
+        ],
+        [
+          "t",
+          -0.08682370839249069
+        ],
+        [
+          "ever",
+          0.08467557345566386
+        ],
+        [
+          "there",
+          -0.06058802535108815
+        ],
+        [
+          "mean",
+          0.056796844170039364
+        ],
+        [
+          "real",
+          -0.04995036490991792
+        ],
+        [
+          "automatically",
+          -0.044265858150375585
+        ],
+        [
+          "it",
+          0.0424146652455076
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_16_false_negative.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 2,
+      "text": "if it weren't for my horse, i wouldn't have spent that year in college.",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.7663972973823547,
+      "prob_sarcasm": 0.23360267281532288,
+      "word_weights_for_sarcasm": [
+        [
+          "t",
+          0.020771839050363065
+        ],
+        [
+          "have",
+          0.017450310082363227
+        ],
+        [
+          "spent",
+          0.01681745394017481
+        ],
+        [
+          "it",
+          0.014923953105821591
+        ],
+        [
+          "for",
+          0.011474447888211753
+        ],
+        [
+          "college",
+          0.010932004904716974
+        ],
+        [
+          "i",
+          0.010140512087189881
+        ],
+        [
+          "year",
+          0.007299839648113099
+        ],
+        [
+          "wouldn",
+          0.00645194929798324
+        ],
+        [
+          "horse",
+          -0.005811896820241727
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_17_false_negative.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 3,
+      "text": "am upvotat.. restul faceti voi",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.7991971373558044,
+      "prob_sarcasm": 0.20080287754535675,
+      "word_weights_for_sarcasm": [
+        [
+          "upvotat",
+          0.3510025102523419
+        ],
+        [
+          "voi",
+          0.29383022987277835
+        ],
+        [
+          "faceti",
+          0.15801582550091722
+        ],
+        [
+          "restul",
+          0.14251399449770494
+        ],
+        [
+          "am",
+          -0.03928897346603304
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_18_false_negative.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 4,
+      "text": "i was going to buy it, but don't want windows 10 home.",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.9414250254631042,
+      "prob_sarcasm": 0.058575015515089035,
+      "word_weights_for_sarcasm": [
+        [
+          "windows",
+          0.06327051032356497
+        ],
+        [
+          "buy",
+          0.050894440302544114
+        ],
+        [
+          "10",
+          0.047381929651867806
+        ],
+        [
+          "home",
+          -0.04166441014619447
+        ],
+        [
+          "to",
+          0.03693957809259393
+        ],
+        [
+          "was",
+          0.03191761377486018
+        ],
+        [
+          "want",
+          0.023941152448559877
+        ],
+        [
+          "i",
+          0.02250922000688004
+        ],
+        [
+          "but",
+          0.018016565657196747
+        ],
+        [
+          "going",
+          0.016852128169130006
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_19_false_negative.html"
+    },
+    {
+      "category": "false_negative",
+      "rank": 5,
+      "text": "but what about the kilogram?",
+      "true_label": 1,
+      "predicted_label": 0,
+      "prob_not_sarcasm": 0.5080766677856445,
+      "prob_sarcasm": 0.49192336201667786,
+      "word_weights_for_sarcasm": [
+        [
+          "kilogram",
+          0.21845210973405932
+        ],
+        [
+          "but",
+          0.2108803963431693
+        ],
+        [
+          "the",
+          0.16395922177214098
+        ],
+        [
+          "about",
+          0.12970722587506725
+        ],
+        [
+          "what",
+          0.05887224075025426
+        ]
+      ],
+      "html_file": "lime_roberta_sarc_20_false_negative.html"
+    }
+  ]
+}
